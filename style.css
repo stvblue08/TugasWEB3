@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
+
+:root{
+    --main-bg: #1e1e1e;
+    --main-white: #ffffff;
+    --main-accent: #ff4d00;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans";
+    color: var(--main-white);
+}
+
+body{
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+}
+
+/* Navbar */
+.navbar{
+    width: 100%;
+}
+.navbar .navbar-link-list{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    column-gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 40px;
+}
+
+/* Hero */
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 120px;
+}
+
+.hero-text{
+    font-size: 140px;
+    width: 554px;
+    line-height: 102%;
+    letter-spacing: -1px;
+}
+
+.container-left{
+    display: flex;
+    align-items: end;
+}
+
+.hero-image{
+    display: flex;
+    width: 488px;
+    height: 561px;
+    overflow: hidden;
+}   
+
+.gambar-langit{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+

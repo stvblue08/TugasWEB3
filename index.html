@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <title>Tugas WEb 3</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            z-index: 10;
+        }
+
+        .navbar-link-list {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .navbar-link {
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+
+        .item-list {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        .container-left, .container-right {
+            width: 50%;
+        }
+
+        .hero-text {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtext {
+            font-size: 1.5rem;
+            color: #555;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Section 1 */
+        .section-one {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #dfe4ea;
+            text-align: center;
+        }
+
+        .section-one h2, .section-one p {
+            margin-top: 1rem;
+        }
+
+        /* Section 2 */
+        .section-two {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .section-two .content-left {
+            width: 50%;
+            text-align: right;
+            padding-right: 2rem;
+        }
+
+        .section-two .content-right {
+            width: 50%;
+            text-align: left;
+        }
+
+        .section-two img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+        }
+
+        /* Section 3 */
+        .section-three {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #e9ecef;
+            text-align: center;
+        }
+
+        .section-three img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .section-three p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body data-scroll-container>
+
+<!-- Navbar -->
+<section class="navbar">
+    <ul class="navbar-link-list">
+        <li class="navbar-link">
+            <p class="item-list"> WORK </p>
+        </li>
+        <li class="navbar-link">
+            <p class="item-list"> ABOUT </p>
+        </li>
+        <li class="navbar-link">
+            <p class="item-list"> CONTACT </p>
+        </li>
+    </ul>
+</section>
+
+<!-- Hero Section -->
+<section class="hero" data-scroll-section>
+    <div class="container-left">
+        <h1 class="hero-text" data-scroll data-scroll-speed="3">
+            Yoo, I’m M. Ali
+        </h1>
+        <p class="hero-subtext" data-scroll data-scroll-speed="2">Berotak Senku</p>
+        <p class="hero-subtext" data-scroll data-scroll-speed="1">KOFTTE.</p>
+    </div>
+    <div class="container-right">
+        <div class="hero-image" data-scroll data-scroll-speed="2">
+            <img src="senku.jpg" alt="Senku Image">
+        </div>
+    </div>
+</section>
+
+<!-- Section 2 -->
+<section class="section-two" data-scroll-section>
+    <div class="content-right" data-scroll data-scroll-speed="3">
+        <img src="senku2.jpg" alt="Gambar untuk section 2">
+    </div>
+    <div class="content-left" data-scroll data-scroll-speed="2">
+        <p>KEEP ON FIGHTING TILL THE END</p>
+    </div>
+</section>
+
+<!-- Section 3 -->
+<section class="section-three" data-scroll-section>
+    <div class="image-center" data-scroll data-scroll-speed="2">
+        <img src="senku.jpg" alt="Gambar untuk section 3">
+    </div>
+    <p data-scroll data-scroll-speed="1">KEEP ON FIGHTING TILL THE END.</p>
+</section>
+
+<!-- Locomotive Scroll Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true
+        });
+    });
+</script>
+
+</body>
+</html>
